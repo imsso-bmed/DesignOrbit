@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import"./globals.css";export const metadata:Metadata={title:"Design Orbit — Journal",description:"Medical visualization, interactive Web3D and scientific storytelling by Soyoung Lim."};export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
