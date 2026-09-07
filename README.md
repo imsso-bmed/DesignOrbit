@@ -1,41 +1,30 @@
-# Design Orbit Journal
+# Design Orbit — static edition
 
-A mobile-friendly bilingual editorial site for Design Orbit. It includes:
+Pure Vite + React static site. No server, database, Cloudflare Worker, or environment variable is required.
 
-- Design Orbit landing page
-- Purple Journal index
-- Korean / English article switcher
-- Long-form editorial article layout
-- Interactive click-to-focus visual demo
-- Responsive desktop and mobile styling
-
-## Run locally
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL printed in the terminal.
+## GitHub Pages
 
-## Publish through GitHub
+1. Replace the contents of the `imsso-bmed/DesignOrbit` repository with this project.
+2. Commit and push to `main`.
+3. In GitHub, open **Settings → Pages**.
+4. Under **Build and deployment**, choose **GitHub Actions**.
+5. The included workflow builds and publishes the site automatically.
 
-1. Create a new GitHub repository.
-2. Upload the extracted files, including the `.openai` directory.
-3. Commit to the default branch.
-4. Connect the repository to your preferred hosting provider.
+The initial URL will be `https://imsso-bmed.github.io/DesignOrbit/`.
 
-The main routes are:
+Navigation uses hash routes so direct links continue to work on GitHub Pages:
 
-- `/` — Design Orbit home
-- `/journal` — Journal index
-- `/journal/click-to-focus` — First bilingual article
+- `#/`
+- `#/journal`
+- `#/journal/click-to-focus`
 
-## Customize
+## Custom domain
 
-- Edit global colors and typography in `app/globals.css`.
-- Edit the home page in `app/page.tsx`.
-- Add article cards in `app/journal/page.tsx`.
-- Duplicate the `app/journal/click-to-focus` folder for the next article.
-
-The built-in demo uses abstract CSS forms so the starter has no model-license or patient-data dependency. Replace it later with a public GLB and React Three Fiber when the final model is ready.
+Enter the domain under **Settings → Pages → Custom domain**, then add the DNS records GitHub displays at your domain registrar. Enable **Enforce HTTPS** after verification completes.
